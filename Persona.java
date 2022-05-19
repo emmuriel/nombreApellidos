@@ -3,8 +3,6 @@ public class Persona {
     private String nombre;
     private String apellidos;
     private int edad;
-
-
     //Constructores
     public Persona(){}
     public Persona(String n, String a, int e){
@@ -12,10 +10,6 @@ public class Persona {
         this.apellidos=a;
         this.edad=e;
     }
-    //Métodos de la clase
-
-
-
 
     //getters
     public int getEdad()
@@ -31,19 +25,27 @@ public class Persona {
         return this.apellidos;
     }  
 
-        //set
-        public void setEdad(int e)
-        {
-             this.edad=e;
-        }
-        public void setNombre(String n)
-        {
-            this.nombre=e;
-        }  
-        public String getApellidos()
-        {
-            return this.apellidos;
-        }  
+    //set
+    public void setEdad(int e)
+    {
+        this.edad=e;
+    }
+    public void setNombre(String n)
+    {
+        this.nombre=n;
+    }  
+    public void setApellidos(String a)
+    {
+        this.apellidos=a;
+    }  
 
+    public boolean mayorEdad(){
+        if (this.edad<18){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
     
 }
